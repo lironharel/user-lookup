@@ -1,0 +1,13 @@
+// src/assets/styles/_variables.scss
+@use '../../assets/styles/variables' as v;
+
+.bread-crumbs-separator {
+   border: 0.5px solid #e5e7ef;
+}
+
+.users-grid-container {
+   display: flex;
+   flex-flow: wrap;
+   justify-content: flex-start;
+   margin: - v.$box-margin;
+}

@@ -1,0 +1,29 @@
+// src/assets/styles/_variables.scss
+@use '../../../assets/styles/variables' as v;
+
+.bread-crumbs-container {
+   padding-bottom: 2px;
+   display: flex;
+   align-items: center;
+   height: 24px;
+
+   .bread-crumbs-users-list {
+      font-weight: bold;
+      text-decoration: none;
+      color: v.$dark-grey;
+   }
+
+   a.bread-crumbs-users-list:hover {
+      text-decoration: underline;
+   }
+
+   .bread-crumbs-arrow {
+      filter: v.$blue-color-filter;
+   }
+
+   .bread-crumbs-selected-user {
+      color: v.$light-grey
+   }
+}
+
+
