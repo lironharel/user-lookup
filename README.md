@@ -1,14 +1,16 @@
 # User Lookup 
 
+## Demo
+The application is hosted on Netlify. You can check it out here: https://gorgeous-belekoy-19f5f7.netlify.app/
+
+## Description
+
 This is a super simple, browser-based user lookup system that displays a list of users and allows users to see more information about any user by clicking on it. This application uses the JSONPlaceholder API to fetch user data and is built using React, including SCSS and HTML.
 
 See the following preview:
 
 <img width="1234" alt="Screen Shot 2023-03-01 at 12 50 36" src="https://user-images.githubusercontent.com/44953386/222118638-69a2da6c-9515-4d10-9cd2-0a510ee37d8d.png">
 
-## Demo
-
-The application is hosted on Netlify. You can check it out here: https://gorgeous-belekoy-19f5f7.netlify.app/
 
 ## Local Installation
 
