@@ -12,7 +12,7 @@ function UserLookup() {
    // Fetch users on every page load
    useEffect(() => {
       fetchUsers();
-   }, [])
+   }, [fetchUsers])
    
    if (loading) {
       return (

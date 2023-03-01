@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useCallback, useState } from "react";
 
 export const UserContext = createContext();
 
@@ -13,7 +13,7 @@ const UserContextProvider = (props) => {
       setError(error);
    };
 
-   const fetchUsers = async () => {
+   const fetchUsers = useCallback(async () => {
       setLoading(true);
       try {
          const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -27,7 +27,7 @@ const UserContextProvider = (props) => {
          handleFetchError(error);
          setLoading(false);
       }
-   };
+   }, []);
 
    return (
       <UserContext.Provider
