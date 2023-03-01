@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import BreadCrumbs from "../components/breadCrumbs/BreadCrumbs";
+import BreadCrumbs from "../components/common/breadCrumbs/BreadCrumbs";
 import ErrorFetchingData from "../components/common/error/ErrorFetchingData";
 import UserInfo from "../components/userInfo/UserInfo";
 import UsersList from "../components/usersList/UsersList";

@@ -1,4 +1,4 @@
-import { ReactComponent as RightArrow } from "../../assets/icons/chevron_right.svg";
+import { ReactComponent as RightArrow } from "../../../assets/icons/chevron_right.svg";
 import './breadCrumbs.scss'
 
 function BreadCrumbs({mainPage, subPage, navToMainPage}) {
