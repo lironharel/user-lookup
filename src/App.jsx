@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserContextProvider from "./context/userContext";
 import UserLookup from "./pages/UserLookup";
-import PageNotFound from "./components/common/error/PageNotFound";
+import PageNotFound from "./pages/PageNotFound";
 import "./app.scss";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
             <Router>
                <Routes>
                   <Route exact path="/" element={<UserLookup />} />
-                  <Route path="*" element={<PageNotFound />} />
+                  <Route path="/*" element={<PageNotFound />} />
                </Routes>
             </Router>
          </UserContextProvider>

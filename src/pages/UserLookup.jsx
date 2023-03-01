@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import BreadCrumbs from "../components/common/breadCrumbs/BreadCrumbs";
-import ErrorFetchingData from "../components/common/error/ErrorFetchingData";
+import Error from "../components/common/error/Error";
 import UserInfo from "../components/userInfo/UserInfo";
 import UsersList from "../components/usersList/UsersList";
 import { UserContext } from "../context/userContext";
@@ -17,9 +17,12 @@ function UserLookup() {
    if (error) {
       return (
          <div>
-            <BreadCrumbs mainPage={"Users List"} />
+            <BreadCrumbs mainPage={'Users List'} />
             <hr className="bread-crumbs-separator" />
-            <ErrorFetchingData />
+            <Error 
+               heading={'Error fetching data'} 
+               content={'Please try again later.'} 
+            />
          </div>
       );
    }
@@ -29,7 +32,7 @@ function UserLookup() {
       return (
          <div>
             <BreadCrumbs
-               mainPage={"Users List"}
+               mainPage={'Users List'}
                subPage={selectedUser?.name}
                navToMainPage={navToUsersList}
             />
@@ -43,7 +46,7 @@ function UserLookup() {
    else {
       return (
          <div>
-            <BreadCrumbs mainPage={"Users List"} />
+            <BreadCrumbs mainPage={'Users List'} />
             <hr className="bread-crumbs-separator" />
             <UsersList />
          </div>
