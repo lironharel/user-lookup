@@ -7,7 +7,7 @@
    align-items: center;
    height: 24px;
 
-   .bread-crumbs-users-list {
+   .bread-crumbs-main-page {
       font-weight: bold;
       text-decoration: none;
       color: v.$dark-grey;
@@ -24,7 +24,7 @@
       filter: v.$blue-color-filter;
    }
 
-   .bread-crumbs-selected-user {
+   .bread-crumbs-sub-page {
       color: v.$light-grey
    }
 }

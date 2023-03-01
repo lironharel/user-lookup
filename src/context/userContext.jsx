@@ -29,9 +29,14 @@ const UserContextProvider = (props) => {
       }
    }, []);
 
-   // Navigates to Users List view by setting selected user to null
-   const goToUsersList = () => {
+   // Navigation function to Users List view
+   const navToUsersList = () => {
       setSelectedUser(null);
+   }
+
+   // Navigation function to User Info view for the user boxes
+   const navToUserInfo = (user) => {
+      setSelectedUser(user);
    }
 
    return (
@@ -41,9 +46,10 @@ const UserContextProvider = (props) => {
             users,
             selectedUser,
             setSelectedUser,
-            goToUsersList,
             loading,
             error,
+            navToUsersList,
+            navToUserInfo
          }}
       >
          {props.children}

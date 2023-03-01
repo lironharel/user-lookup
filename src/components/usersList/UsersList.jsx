@@ -5,7 +5,7 @@ import UserBox from "./userBox/UserBox";
 import "./usersList.scss";
 
 function UsersList() {
-   const { users, fetchUsers, loading } = useContext(UserContext);
+   const { users, navToUserInfo, fetchUsers, loading } = useContext(UserContext);
 
    // Fetch users on every load of Users List view
    useEffect(() => {
@@ -27,7 +27,7 @@ function UsersList() {
             </div>
             <div className="users-grid-container">
                {users.map((user) => (
-                  <UserBox key={user.id} user={user} />
+                  <UserBox key={user.id} user={user} onClickMoreInfo={navToUserInfo} />
                ))}
             </div>
          </div>

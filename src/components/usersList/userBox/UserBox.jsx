@@ -1,13 +1,6 @@
-import React, { useContext } from "react";
-import { UserContext } from "../../../context/userContext";
 import './userBox.scss';
 
-const UserBox = ({ user }) => {
-   const {setSelectedUser} = useContext(UserContext);
-
-   const onClickMoreInfo = () => {
-      setSelectedUser(user);
-   }
+const UserBox = ({ user, onClickMoreInfo }) => {
 
    const getUserInitials = (fullName) => {
       return fullName.split(' ')
@@ -25,7 +18,7 @@ const UserBox = ({ user }) => {
             <span className="user-box-full-name">{user.name}</span>
             <span className="user-box-email">{user.email}</span>
          </div>
-         <button className="user-box-link btn" onClick={onClickMoreInfo}>More Info</button>
+         <button className="user-box-link btn" onClick={() => onClickMoreInfo(user)}>More Info</button>
       </div>
    );
 };
