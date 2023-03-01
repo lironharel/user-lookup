@@ -7,20 +7,14 @@ import { ReactComponent as WorkIcon } from "../../assets/icons/work.svg"
 import UserInfoRow from "./userInfoRow/UserInfoRow";
 import './userInfo.scss'
 
-
 function UserInfo() {
-   const { selectedUser, setSelectedUser, fetchUsers } = useContext(UserContext);
-
-   const NavToUsersList = () => {
-      setSelectedUser(null);
-      fetchUsers();
-   }
+   const { selectedUser, goToUsersList } = useContext(UserContext);
 
    return (
       <div>
          <div className="page-heading-container">
             <h3 className="blue-heading">{selectedUser?.name.toUpperCase()}</h3>
-            <button className="back-btn btn" onClick={NavToUsersList}>
+            <button className="back-btn btn" onClick={goToUsersList}>
                <LeftArrow className="back-btn-arrow"/>
                <span>Back</span>
             </button>

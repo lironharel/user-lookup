@@ -7,24 +7,14 @@ import UsersList from '../components/usersList/UsersList';
 import { UserContext } from '../context/userContext'
 
 function UserLookup() {
-   const { selectedUser, fetchUsers, loading, error } = useContext(UserContext);
+   const { selectedUser, fetchUsers, error } = useContext(UserContext);
    
    // Fetch users on every page load
    useEffect(() => {
       fetchUsers();
    }, [fetchUsers])
    
-   if (loading) {
-      return (
-         <div>
-            <BreadCrumbs />
-            <hr className="bread-crumbs-separator" />
-            <LoadingWheel />
-         </div>
-        )
-   }
-
-   else if (error) {
+   if (error) {
       return (
          <div>
             <BreadCrumbs />

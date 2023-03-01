@@ -29,6 +29,11 @@ const UserContextProvider = (props) => {
       }
    }, []);
 
+   // Navigates to Users List view by setting selected user to null
+   const goToUsersList = () => {
+      setSelectedUser(null);
+   }
+
    return (
       <UserContext.Provider
          value={{
@@ -36,6 +41,7 @@ const UserContextProvider = (props) => {
             users,
             selectedUser,
             setSelectedUser,
+            goToUsersList,
             loading,
             error,
          }}

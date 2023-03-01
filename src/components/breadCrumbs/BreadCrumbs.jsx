@@ -4,18 +4,12 @@ import { UserContext } from "../../context/userContext";
 import './breadCrumbs.scss'
 
 function BreadCrumbs() {
-   const {selectedUser, setSelectedUser, fetchUsers} = useContext(UserContext);
-
-   // Navigates to main Users List view by setting back selectedUser to null
-   const NavToUsersList = () => {
-      setSelectedUser(null);
-      fetchUsers();
-   }
+   const {selectedUser, goToUsersList} = useContext(UserContext);
 
    if (selectedUser) {
       return (
          <div className="bread-crumbs-container">
-            <span className="bread-crumbs-users-list link" onClick={NavToUsersList}>Users List</span>
+            <span className="bread-crumbs-users-list link" onClick={goToUsersList}>Users List</span>
             <RightArrow className="bread-crumbs-arrow"/>
             <span className="bread-crumbs-selected-user">{selectedUser?.name }</span>
          </div>
