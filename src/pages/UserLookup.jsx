@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import BreadCrumbs from "../components/common/breadCrumbs/BreadCrumbs";
 import Error from "../components/common/error/Error";
 import UserInfo from "../components/userInfo/UserInfo";
@@ -6,13 +6,7 @@ import UsersList from "../components/usersList/UsersList";
 import { UserContext } from "../context/userContext";
 
 function UserLookup() {
-   const { selectedUser, navToUsersList, fetchUsers, error } =
-      useContext(UserContext);
-
-   // Fetch users on every page load
-   useEffect(() => {
-      fetchUsers();
-   }, [fetchUsers]);
+   const { selectedUser, navToUsersList, error } = useContext(UserContext);
 
    if (error) {
       return (
