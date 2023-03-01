@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import BreadCrumbs from '../components/breadCrumbs/BreadCrumbs';
 import ErrorFetchingData from '../components/common/error/ErrorFetchingData';
-import LoadingWheel from '../components/common/loadingWheel/LoadingWheel';
 import UserInfo from '../components/userInfo/UserInfo';
 import UsersList from '../components/usersList/UsersList';
 import { UserContext } from '../context/userContext'
