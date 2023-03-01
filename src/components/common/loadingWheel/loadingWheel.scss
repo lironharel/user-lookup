@@ -1,0 +1,26 @@
+// src/assets/styles/_variables.scss
+@use '../../../assets/styles/variables' as v;
+
+.loading-wheel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loading-wheel {
+  display: inline-block;
+  width: v.$loading-wheel-size;
+  height: v.$loading-wheel-size;
+  border: 4px solid rgba(v.$loading-wheel-color, 0.2);
+  border-top-color: v.$loading-wheel-color;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

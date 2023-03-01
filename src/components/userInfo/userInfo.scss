@@ -1,35 +1,31 @@
 // src/assets/styles/_variables.scss
 @use '../../assets/styles/variables' as v;
 
-.back-link {
-   text-decoration: none;
+
+
+.back-btn {
    display: flex;
    justify-content: flex-end;
+   align-items: center;
+   padding: 4px 30px 4px 20px;
+   margin-top: 6px;
+   font-size: 12px;
+   height: fit-content;
 
-   .back-btn {
-      display: flex;
-      align-items: center;
-      padding: 4px 30px 4px 20px;
-      margin-top: 6px;
-      font-size: 12px;
-      height: fit-content;
-
-      .back-btn-arrow {
-         width: 20px;
-         height: 20px;
-         filter: invert(100%);
-      }
+   .back-btn-arrow {
+      width: 20px;
+      height: 20px;
+      filter: invert(100%);
    }
 }
 
+
 @media screen and (max-width: 400px) {
-   .back-link {
-      .back-btn {
-         padding: 4px;
-         
-         span {
-            display: none;
-         }
+   .back-btn {
+      padding: 4px;
+      
+      span {
+         display: none;
       }
    }
 }
@@ -60,23 +56,6 @@
          margin-right: 5px;
          margin-left: 5px;
          width: 43px;
-      }
-   }
-
-   .section-body-container {
-      .user-info-row {
-         margin-bottom: 8px;
-
-         .user-info-property {
-            font-weight: 600;
-            color: v.$dark-grey;
-            font-size: 14px;
-         }
-         .user-info-value {
-            margin-left: 10px;
-            font-size: 14px;
-            color: v.$light-grey;
-         }
       }
    }
 }
