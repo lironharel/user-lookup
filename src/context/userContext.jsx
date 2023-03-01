@@ -8,11 +8,13 @@ const UserContextProvider = (props) => {
    const [loading, setLoading] = useState(false);
    const [error, setError] = useState(null);
 
+   // Error handling for users list api fetch
    const handleFetchError = (error) => {
       console.error("Error fetching users from api", error.message);
       setError(error);
    };
 
+   // Fetches users list from api
    const fetchUsers = useCallback(async () => {
       setLoading(true);
       try {
