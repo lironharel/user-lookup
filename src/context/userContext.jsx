@@ -36,7 +36,7 @@ const UserContextProvider = (props) => {
       setSelectedUser(null);
    }
 
-   // Navigation function to User Info view for the user boxes
+   // Navigation function to User Info view
    const navToUserInfo = (user) => {
       setSelectedUser(user);
    }
